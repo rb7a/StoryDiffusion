@@ -113,7 +113,6 @@ def get_caption_group(images_groups,captions = []):
 
 def get_comic_classical(images,captions = None,font = None,pad_image = None):
     if pad_image == None:
-#        raise ValueError("pad_image is None")
         pad_image = Image.open("./images/pad_images.png")
     images = [add_white_border(image) for image in images]
     pad_image = pad_image.resize(images[0].size, Image.LANCZOS)
@@ -132,7 +131,6 @@ def get_comic_classical(images,captions = None,font = None,pad_image = None):
 
 def get_comic_4panel(images,captions = [],font = None,pad_image = None):
     if pad_image == None:
-#        raise ValueError("pad_image is None")
         pad_image = Image.open("./images/pad_images.png")
     pad_image = pad_image.resize(images[0].size, Image.LANCZOS)
     images = [add_white_border(image) for image in images]
